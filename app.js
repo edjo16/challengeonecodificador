@@ -5,8 +5,10 @@ const desencriptarBtn = document.getElementById('desencriptar')
 const containerData = document.getElementById('data-list')
 const initialState = document.getElementById('initial_state')
 const data =document.getElementById('data')
+
 const encriptar = () => {
     const data = plainText.value
+    
     let newdata=''
         for (let i = 0; i < data.length; i++) {
         if (data[i] === 'a') {
@@ -36,20 +38,30 @@ const desencriptar = () => {
     }
 
 encriptarBtn.addEventListener('click', ()=> {
-    copy.style.display='block'
-    data.style.display='block'
-    initialState.style.display='none'
-    data.innerHTML= encriptar()
-    plainText.value=''
+    if(plainText.value ===''){
+        alert("Es necesario que agregues texto para encriptarlo.");
+
+    } else{
+
+        copy.style.display='block'
+        data.style.display='block'
+        initialState.style.display='none'
+        data.innerHTML= encriptar()
+        plainText.value=''
+    }
 })
 
 desencriptarBtn.addEventListener('click', ()=>{
+    if(plainText.value ===''){
+        alert("Es necesario que agregues texto para desencriptarlo.");
+
+    } else{
     initialState.style.display='none'
     data.style.display='block'
     copy.style.display='block'
     data.innerHTML= desencriptar()
     plainText.value=''
-
+}
 })
 
 const copyClipboard=()=> {
