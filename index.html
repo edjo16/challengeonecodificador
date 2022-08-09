@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Codificador</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="src/img/Vector.svg" alt="Alura-logo">
+    </nav>
+    <!-- main -->
+    <main class="main-container">
+        <!--Section 1-->
+        <section class="container-form">
+            <form class="form">
+                <textarea name="plain-text" id="textarea" cols="90" rows="20" placeholder="Ingrese el texto aqui"></textarea>
+            </form>
+            <div>
+                <i class='bx bxs-info-circle'></i>
+                <span>Solo letras minúsculas y sin acentos</span>
+                <div class="button-container">
+                    <button class="encript-btn" id="encriptar" >Encriptar</button>
+                    <button class="desencript-btn" id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <!--Section 2-->
+        <section id="data-list" class="container-data">
+            <p id="data"></p>
+            <div id="initial_state">
+                <img class="alura-toy" src="src/img/Muñeco.svg" alt="alura-toy">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <button id="copy-btn" class="desencript-btn">copiar</button>
+        </section>
+    </main>
+    <script src="/app.js"></script>
+</body>
+
+</html>
